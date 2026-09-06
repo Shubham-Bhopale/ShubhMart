@@ -17,27 +17,21 @@
       </div>
     </div>
     
-    <div class="col-lg-7">
-      <div class="hero-image-placeholder rounded-3 d-flex justify-content-center align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#444" viewBox="0 0 16 16">
-          <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-          <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2zM14 2H4a1 1 0 0 0-1-1h10a1 1 0 0 1 1 1v.5h-10a2 2 0 0 0-2 2v7.36l3.118-3.12a2.5 2.5 0 0 1 3.536 0l2.678 2.677L11.536 7.5a2.5 2.5 0 0 1 3.535 0L15 8.354V5a1 1 0 0 0-1-1z"/>
-        </svg>
-      </div>
-    </div>
+ <!-- In your home page, replace the placeholder box with this -->
+<div class="col-lg-7">
+  <!-- Updated path to local assets and changed from a div to an img tag -->
+  <img src="hero-banner.png" 
+       alt="ShubhMart New Season Arrivals" 
+       class="img-fluid rounded-3 shadow" 
+       style="width: 100%; height: 380px; object-fit: cover; object-position: center;">
+</div>
   </div>
 
   <div class="category-wrapper d-flex gap-2 mb-5 pb-2">
-    <button class="btn category-btn active rounded-pill px-4 py-1">All</button>
+    <button [class.active]="activeCategoryId() === null" class="btn category-btn  rounded-pill px-4 py-1" (click)="getallProducts()">All</button>
     @for(category of categoryList(); track $index) {
-      <button class="btn category-btn rounded-pill px-3 py-1">{{ category.categoryName }}</button>
+      <button (click)="getProductsByCategory(category.categoryId)" [class.active]="activeCategoryId() === category.categoryId" class="btn category-btn rounded-pill px-3 py-1">{{ category.categoryName }}</button>
     }
-    <!-- <button class="btn category-btn rounded-pill px-3 py-1">Electronics</button>
-    <button class="btn category-btn rounded-pill px-3 py-1">Fashion</button>
-    <button class="btn category-btn rounded-pill px-3 py-1">Home & Living</button>
-    <button class="btn category-btn rounded-pill px-3 py-1">Beauty</button>
-    <button class="btn category-btn rounded-pill px-3 py-1">Sports</button>
-    <button class="btn category-btn rounded-pill px-3 py-1">Books</button> -->
   </div>
 
   <div class="d-flex justify-content-between align-items-end mb-4">

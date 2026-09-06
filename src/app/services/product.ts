@@ -17,4 +17,8 @@ export class Product {
     getAllCategories():Observable<ApiResponseModel>{
         return this.http.get<ApiResponseModel>(environment.API_URL + Constants.API_END_POINTS.ALL_CATEGORIES)
     }
+
+    getProductByID(id:number):Observable<ApiResponseModel>{
+        return this.http.get<ApiResponseModel>(environment.API_URL + Constants.API_END_POINTS.PRODUCT_BY_ID + id)
+    }
 }
