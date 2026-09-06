@@ -33,10 +33,10 @@ export const routes: Routes = [
         path:'my-orders',
         component:MyOrders
     },
-    // {
-    //     path:'login',
-    //     component:Login
-    // },
+    {
+        path:'login',
+        component:Login
+    },
     // {
     //     path:'login',
     //     component:Login

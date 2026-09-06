@@ -1,1 +1,137 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+:root {
+  --bg-main: #121212;
+  --bg-card: #1f1f1f;
+  --bg-placeholder: #2a2a2a;
+  --accent-color: #ff6230;
+  --text-muted: #888888;
+}
+
+
+body {
+  background-color: var(--bg-main);
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid #1f1f1f;
+  padding: 1rem 0;
+}
+
+.logo-box {
+  width: 24px;
+  height: 24px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-link {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  margin-right: 1.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+/* Utility Colors & Buttons */
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.bg-accent, .btn-accent {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #e5582b !important;
+  color: white !important;
+}
+
+.btn-dark-custom {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  border: none;
+}
+
+.btn-dark-custom:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* Hero Section */
+.hero-image-placeholder {
+  background-color: var(--bg-card);
+  width: 100%;
+  height: 380px;
+}
+
+/* Categories */
+.category-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.category-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.category-btn {
+  color: #aaaaaa;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  color: #ffffff;
+  background-color: var(--bg-card);
+}
+
+.category-btn.active {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Product Cards */
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-img-placeholder {
+  background-color: var(--bg-placeholder);
+  height: 220px;
+  width: 100%;
+}
+
+.star-rating {
+  color: #ffc107; /* Bootstrap warning color */
+  font-size: 0.8rem;
+}
