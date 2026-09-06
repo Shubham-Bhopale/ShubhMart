@@ -1,1 +1,56 @@
-<p>login works!</p>
+<div class="d-flex align-items-center justify-content-center" style="min-height: 85vh;">
+  <div class="card border-0 p-4 p-md-5 login-card">
+    
+    <h3 class="text-white fw-bold mb-2">Welcome back</h3>
+    <p class="text-muted mb-4" style="font-size: 0.9rem;">Log in to continue to your account.</p>
+
+    <form>
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label text-muted" style="font-size: 0.85rem;">Email Address</label>
+        <input type="email" class="form-control custom-input" placeholder="you@example.com">
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label text-muted" style="font-size: 0.85rem;">Password</label>
+        <input type="password" class="form-control custom-input" placeholder="••••••••">
+      </div>
+
+      <!-- Remember & Forgot -->
+      <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+        <div class="form-check m-0">
+          <input class="form-check-input custom-checkbox" type="checkbox" id="rememberMe">
+          <label class="form-check-label text-muted mt-1" for="rememberMe" style="font-size: 0.85rem;">
+            Remember me
+          </label>
+        </div>
+        <a href="#" class="text-accent text-decoration-none" style="font-size: 0.85rem;">Forgot password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" class="btn btn-accent w-100 fw-semibold py-2 mb-4 rounded-2">
+        Log In
+      </button>
+
+      <!-- Divider -->
+      <div class="position-relative text-center mb-4">
+        <hr style="border-color: #333;">
+        <span class="text-muted px-2 position-absolute top-50 start-50 translate-middle" style="font-size: 0.75rem; background-color: #1a1a1a;">
+          OR
+        </span>
+      </div>
+
+      <!-- Google Button -->
+      <button type="button" class="btn btn-google w-100 d-flex align-items-center justify-content-center gap-2 py-2 mb-4 rounded-2">
+        <i class="bi bi-google"></i> Continue with Google
+      </button>
+
+      <!-- Sign Up Link -->
+      <p class="text-center text-muted mb-0" style="font-size: 0.85rem;">
+        Don't have an account? <a routerLink="/signup" class="text-accent text-decoration-none">Sign up</a>
+      </p>
+    </form>
+    
+  </div>
+</div>

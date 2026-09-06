@@ -1,0 +1,56 @@
+.login-card {
+  background-color: #1a1a1a;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Form Inputs */
+.custom-input {
+  background-color: #222222;
+  border: 1px solid transparent;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+}
+
+.custom-input:focus {
+  background-color: #2a2a2a;
+  border-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.custom-input::placeholder {
+  color: #555555;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  background-color: #222222;
+  border-color: #333333;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.custom-checkbox:focus {
+  box-shadow: none;
+  border-color: var(--accent-color);
+}
+
+/* Google Button */
+.btn-google {
+  background-color: #222222;
+  color: #dddddd;
+  border: 1px solid #333333;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-google:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444444;
+}

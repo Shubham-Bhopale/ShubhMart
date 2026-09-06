@@ -25,7 +25,7 @@ export class Home implements OnInit {
     this.productsrv.getAllProducts().subscribe({
       next: (res: ApiResponseModel) => {
         this.productList.set(res.data);
-        console.log(this.productList);
+        console.log(this.productList());
       }
     });
     this.activeCategoryId.set(null);
@@ -43,6 +43,7 @@ export class Home implements OnInit {
     this.productsrv.getProductByID(categoryId).subscribe({
       next: (res: ApiResponseModel) => {
         this.productList.set(res.data);
+        console.log(this.productList());
       }
     });
     this.activeCategoryId.set(categoryId);
